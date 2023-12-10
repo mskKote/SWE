@@ -1,0 +1,42 @@
+.requestCard {
+  border-radius: 15px;
+
+  .requestCardHeader {
+    display: flex;
+
+    .url {
+      height          : 2.4rem;
+      width           : 100%;
+      font-size       : 16px;
+      line-height     : 3rem;
+      outline         : none;
+      background-color: hsl(0, 0%, 100%);
+      border          : 1px solid hsl(0, 0%, 80%);
+
+      &:focus,
+      &:active {
+        box-shadow: 0 0 0 1px #2684ff;
+      }
+    }
+
+    .delete,
+    .edit {
+      background-color: hsl(0, 0%, 100%);
+      border          : 1px solid hsl(0, 0%, 80%);
+      border-radius   : 0;
+      font-size       : 16px;
+      cursor          : pointer;
+    }
+
+    &>div {
+      border-radius: 4px 4px 0 0;
+      width        : min-content;
+      min-width    : calc(6ch + 4rem);
+
+      div {
+        border-radius   : 0;
+        // height       : 2.4rem;
+      }
+    }
+  }
+}

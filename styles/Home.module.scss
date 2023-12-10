@@ -1,0 +1,48 @@
+.layout {
+  display              : grid;
+  grid-template-columns: 25.5vw 74.5vw;
+  grid-template-rows   : 100vh;
+  overflow             : hidden;
+}
+
+//* Vertical expandable layer styles
+.expandableWrapper {
+  overflow-y: hidden;
+  position  : relative;
+  height    : 100%;
+
+  .expandableContainer1 {
+    height  : 50%;
+    width   : 100%;
+    position: absolute;
+    bottom  : 0px;
+    z-index : 5;
+  }
+
+  .expandableContainer2 {
+    height: 50%;
+    width : 100%;
+  }
+
+  .expandableTrigger {
+    width           : 40px;
+    height          : 40px;
+    position        : absolute;
+    top             : 0;
+    right           : 50%;
+    transform       : translate(50%, calc(-50% + 1.5px));
+    cursor          : ns-resize;
+    background-color: #002240;
+    border          : 3px solid #002240;
+    border-radius   : 100%;
+    transition      : font-size .3s, transform .3s;
+    font-size       : 1.5rem;
+    color           : #fff;
+    user-select     : none;
+
+    &:active {
+      transform: translate(50%, calc(-50% + 1.5px)) scale(1.15);
+      font-size: 1.65rem;
+    }
+  }
+}

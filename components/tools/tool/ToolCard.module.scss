@@ -1,0 +1,20 @@
+.toolCard {
+  border    : 2px black solid;
+  background: transparent;
+  margin    : 1rem;
+  cursor    : grab;
+  top       : unset !important;
+  left      : unset !important;
+  min-width : 20ch;
+
+  .request,
+  .entity,
+  .folder {
+    padding-inline: 1rem;
+
+    h2 {
+      user-select   : none;
+      pointer-events: none;
+    }
+  }
+}

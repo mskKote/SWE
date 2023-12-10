@@ -1,0 +1,35 @@
+html,
+body {
+  padding: 0;
+  margin : 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color          : inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+//* Resizable editor styles
+.ace_print-margin {
+  left: calc(25.5vw - 40px) !important;
+}
+
+
+//* ERDiagram edges animation
+@keyframes dashdrawStop {
+  0% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dashdrawRevert {
+  0% {
+    stroke-dashoffset: -10;
+  }
+}

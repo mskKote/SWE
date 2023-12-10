@@ -1,0 +1,56 @@
+.confirmContainer {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+  height         : 100%;
+  padding-bottom : 9rem;
+}
+
+.header {
+  font-size  : 3rem;
+  color      : white;
+  text-shadow: 0px 1px 5px black;
+}
+
+.options {
+  display       : flex;
+  flex-direction: row;
+  grid-gap      : 3rem;
+  margin-top    : 5rem;
+}
+
+.btn {
+  font-family  : monospace;
+  width        : 15rem;
+  line-height  : 75px;
+  font-size    : 35px;
+  outline      : none;
+  margin-left  : auto;
+  border       : 2px solid transparent;
+  border-radius: 6px;
+  cursor       : pointer;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  &.no {
+    color           : white;
+    background-color: black;
+
+    &:focus,
+    &:active {
+      filter: brightness(1.1) saturate(1.15) drop-shadow(0 0 5px black) !important;
+    }
+  }
+
+  &.yes {
+    background-color: #7bb7f7;
+
+    &:focus,
+    &:active {
+      filter: brightness(1.1) saturate(1.15) drop-shadow(0 0 5px #7bb7f7) !important;
+    }
+  }
+}

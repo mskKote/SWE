@@ -1,0 +1,157 @@
+.entityNode {
+  font-size      : 12px;
+  backdrop-filter: blur(1px);
+  border         : 1px solid #555;
+  border-radius  : 5px;
+  text-align     : center;
+  padding        : 0;
+  will-change    : transform;
+
+  .entityTitle {
+    margin         : 0;
+    line-height    : 40px;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+
+    input {
+      font            : inherit;
+      width           : 15ch;
+      background-color: transparent;
+      border          : none;
+      text-align      : center;
+    }
+
+    .entityNodeActions {
+      display : flex;
+      grid-gap: 3rem;
+
+      .hideDetails {
+        border          : none;
+        background-color: transparent;
+        font-size       : 30px;
+        cursor          : pointer;
+      }
+    }
+  }
+
+
+  .columns {
+    width                     : 100%;
+    border-collapse           : collapse;
+    border-bottom-left-radius : 25px;
+    border-bottom-right-radius: 25px;
+    font-family               : Tahoma, Geneva, sans-serif;
+
+    .row {
+      position: relative;
+    }
+
+    thead th {
+      background-color: #54585d;
+      color           : #ffffff;
+      font-weight     : bold;
+      font-size       : 13px;
+      border          : 1px solid #54585d;
+    }
+
+    tbody {
+      td {
+        height    : 30px;
+        padding   : 0px;
+        box-sizing: content-box;
+        color     : #636363;
+        border    : 1px solid #dddfe1;
+      }
+
+      td.tableKey {
+        padding-inline: 15px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9fafb;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
+    }
+
+    //*========== Ячейки
+    .handleSource,
+    .handleTarget {
+      background: #555;
+    }
+
+    .default {
+      input {
+        text-align: center;
+      }
+    }
+
+    input.text {
+      min-height      : 100%;
+      position        : relative;
+      background-color: transparent;
+      width           : 75px;
+      border          : none;
+      border-radius   : 0;
+      outline         : 0 !important;
+      padding         : 2px 8px;
+
+      &:focus {
+        box-shadow: 0 0 0 1px #2684ff;
+      }
+    }
+
+    .dragging {
+      pointer-events: none !important;
+    }
+
+    .selectOptions>div,
+    .selectType>div {
+      border       : none;
+      border-radius: 0;
+      max-width    : 12rem;
+    }
+
+    .addColumnBtn {
+      width      : 100%;
+      border     : none;
+      cursor     : pointer;
+      font-family: monospace;
+      transition : opacity 0.3s;
+      opacity    : 0.5;
+
+      &:hover {
+        opacity: 0.75;
+      }
+
+      &:active {
+        opacity: 1;
+      }
+    }
+
+    .deleteRow {
+      border          : none;
+      outline         : none;
+      background-color: transparent;
+      font-size       : 1rem;
+      cursor          : pointer;
+      transition      : transform 0.1s ease-in, filter 0.2s ease-out;
+      filter          : saturate(1.15);
+
+      &:focus {
+        transform: scale(1.1);
+      }
+
+      &:hover {
+        transform: scale(1.15);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}

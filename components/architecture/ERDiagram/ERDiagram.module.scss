@@ -1,0 +1,23 @@
+.ERDiagram {
+  user-select: none;
+
+  //* ERDiagram edges animation
+  @keyframes dashdrawStop {
+    0% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes dashdrawRevert {
+    0% {
+      stroke-dashoffset: -10;
+    }
+  }
+}
+
+.minimap {
+  left  : 15px;
+  top   : 20px;
+  right : unset;
+  bottom: unset;
+}

@@ -1,0 +1,37 @@
+.codebar {
+  display       : flex;
+  flex-direction: column;
+  position      : relative;
+
+  h1,
+  p {
+    padding-left: 1.5rem;
+  }
+
+  h1 {
+    font-weight: unset;
+  }
+}
+
+.expandableTrigger {
+  cursor          : ew-resize;
+  position        : absolute;
+  border-radius   : 100%;
+  border          : #002240 3px solid;
+  user-select     : none;
+  bottom          : 40%;
+  right           : 0;
+  width           : 40px;
+  height          : 40px;
+  color           : #002240;
+  background-color: rgb(239, 239, 239);
+  font-size       : 1.5rem;
+  transform       : rotate(90deg) translate(-50%, -50%);
+  transition      : font-size .3s, transform .3s;
+  z-index         : 6;
+
+  &:active {
+    transform: rotate(90deg) translate(-50%, calc(-50% + 1.5px)) scale(1.15);
+    font-size: 1.65rem;
+  }
+}
